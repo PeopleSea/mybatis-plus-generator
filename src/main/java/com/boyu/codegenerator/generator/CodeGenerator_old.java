@@ -1,5 +1,6 @@
-package com.boyu.codegenerator;
+package com.boyu.codegenerator.generator;
 
+import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
@@ -9,12 +10,16 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
+import com.boyu.codegenerator.enums.DriverNameEnum;
+import com.boyu.codegenerator.util.GeneratorCodeUtil;
+import com.boyu.codegenerator.vo.DsTableVo;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CodeGenerator {
+public class CodeGenerator_old {
+
     /**
      * <p>
      * 讀取控制台內容
@@ -34,6 +39,7 @@ public class CodeGenerator {
     }
 
     public static void main(String[] args) {
+
         // 代碼生成器
         AutoGenerator mpg = new AutoGenerator();
 
